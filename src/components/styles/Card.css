@@ -1,0 +1,51 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card.primary {
+  border-top: 3px solid #007bff;
+}
+
+.card.success {
+  border-top: 3px solid #28a745;
+}
+
+.card.danger {
+  border-top: 3px solid #dc3545;
+}
+
+@media (max-width: 768px) {
+  .card {
+    border-radius: 0;
+    margin-bottom: 15px;
+  }
+  
+  .card-header, .card-body {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,233 @@
+/* ListParking.css */
+.parking-list-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parking-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.search-container {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1 1 300px;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.search-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 0 1 auto;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
+
+.search-note {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.parking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.parking-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.8rem;
+  border-left: 4px solid #3498db;
+}
+
+.parking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.parking-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.parking-card p {
+  margin: 0.7rem 0;
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.parking-card strong {
+  color: #2c3e50;
+}
+
+.book-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.book-button:hover {
+  background-color: #27ae60;
+  transform: scale(1.03);
+}
+
+.loading, .error, .no-results {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.loading {
+  background-color: #f9f9f9;
+  color: #3498db;
+  border: 1px dashed #3498db;
+}
+
+.error {
+  background-color: #fef0f0;
+  color: #e74c3c;
+  border: 1px solid #fadbd8;
+}
+
+.no-results {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  border: 1px solid #ecf0f1;
+}
+
+/* Add this to your ListParking.css */
+
+.parking-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parking-list-item {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.parking-list-item:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.parking-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.parking-meta {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .parking-list-container {
+    padding: 1rem;
+  }
+  
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .search-button {
+    width: 100%;
+  }
+  
+  .parking-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .parking-title {
+    font-size: 1.8rem;
+  }
+  
+  .search-container {
+    padding: 1.5rem;
+  }
+}
