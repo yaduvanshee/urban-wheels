@@ -1,13 +1,78 @@
-# React + Vite
+# Urban Wheels Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This is the frontend for the Urban Wheels application, responsible for the user interface and experience. It connects to the Rails backend API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Prerequisite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# urban-wheels
+Before running the frontend, make sure the **backend server is up and running**.
+
+Please follow the backend setup instructions first:
+- Repository: [urban-wheels-backend](https://github.com/yaduvanshee/urban-wheels-backend)
+- Start the backend server at: http://localhost:3000
+
+---
+
+## 🛠️ Getting Started
+
+### Requirements
+- Node.js (20.x)
+- npm or yarn
+
+### Steps
+
+```sh
+# 1. Clone the repository
+git clone https://github.com/yaduvanshee/urban-wheels-frontend.git
+cd urban-wheels-frontend
+
+# 2. Install dependencies
+npm install
+# or
+yarn install
+
+# 3. Start the frontend dev server
+npm run dev
+# or
+yarn dev
+```
+
+The app will be available at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🔗 API Integration
+
+Ensure that API requests are pointed to: `http://localhost:3000` (or your running backend URL).
+You may configure this in `.env` or wherever the base URL is set.
+
+---
+
+## 👥 Seeded Users
+
+The backend includes seed data to help with testing. After running:
+
+```sh
+rails db:seed
+```
+
+These users will be available:
+
+### 🔐 Admin User
+
+- **Email**: `admin@example.com`
+- **Password**: `password`
+- **Role**: `Admin`
+- **Wallet**: ₹1000.00
+
+### 👤 Regular Users
+
+| Email            | Name       | Password | Wallet  |
+|------------------|------------|----------|---------|
+| user1@gmail.com  | User One   | password | ₹1000.00 |
+| user2@gmail.com  | User Two   | password | ₹1000.00 |
+
+Use these credentials to test login flows and access various features.
